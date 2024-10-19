@@ -7,10 +7,12 @@ Library             SeleniumLibrary
 *** Variables ***
 ${URL}      https://tweakers.net/
 
+
+
 *** Test Cases ***
 
 Test Webpage with validation
-    Open Browser    ${URL}                  Chrome
+    Open Browser    ${URL}
     Capture Page Screenshot
     Click Link                              Pricewatch
     Zoek via het zoekveld naar product      iPhone 15 Max Pro
@@ -20,6 +22,16 @@ Test Webpage with validation
 
 
 *** Keywords ***
+
+#Open Headless Browser
+#    Set Environment Variable ${browser}
+#    Set Environment Variable ${URL}
+#    ${options} Evaluate sys.modules[‘selenium.webdriver’].${browser}Options()
+#    … modules=sys, selenium.webdriver
+#    Call Method ${options} add_argument --headless
+#    Create Webdriver ${browser} ${options}
+#    Go To ${URL}
+
 Zoek via het zoekveld naar product
     [Arguments]     ${Zoekterm}
     Input Text                  name=keyword     ${Zoekterm}

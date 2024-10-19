@@ -14,7 +14,7 @@ ${URL}      https://www.klaverblad.nl/berekenen-en-afsluiten-verzekeringspakket.
 Test Webpage with validation
     ${DatumVandaag}     Get Current Date    result_format=%d-%m-%Y
 
-    Open Browser     ${URL}      Chrome      options=add_argument("--disable-search-engine-choice-screen")
+    Open Browser     ${URL}      headlesschrome      options=add_argument("--disable-search-engine-choice-screen")
 
     Maximize Browser Window
     Click Accepteer cookies
