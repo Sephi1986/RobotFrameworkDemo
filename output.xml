@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-10-19T17:22:11.887526" rpa="false" schemaversion="5">
+<suite id="s1" name="Klaverblad" source="D:\Robot\TestProject\Tests\Klaverblad.robot">
+<test id="s1-t1" name="Test Webpage with validation" line="14">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-10-19T17:22:12.026703" level="INFO">${DatumVandaag} = 19-10-2024</msg>
+<var>${DatumVandaag}</var>
+<arg>result_format=%d-%m-%Y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-10-19T17:22:12.026703" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:12.027707" level="INFO">Opening browser 'Chrome' to base url 'https://www.klaverblad.nl/berekenen-en-afsluiten-verzekeringspakket.htm'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<arg>options=add_argument("--disable-search-engine-choice-screen")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-19T17:22:12.026703" elapsed="1.992146"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-19T17:22:14.018849" elapsed="0.022999"/>
+</kw>
+<kw name="Click Accepteer cookies">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:22:16.042918" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:22:14.042850" elapsed="2.000068"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:16.042918" level="INFO">Clicking element 'id=bcAcceptAll'.</msg>
+<arg>id=bcAcceptAll</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:16.042918" elapsed="0.044004"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:22:14.041848" elapsed="2.045074"/>
+</kw>
+<kw name="Controleer dat de pagina Premie berekenen Verzekeringspakket is geopend">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:16.094921" level="INFO">Current page contains element 'id:Premie_berekenen_Verzekeringsp-anchor'.</msg>
+<arg>id:Premie_berekenen_Verzekeringsp-anchor</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-10-19T17:22:16.087922" elapsed="0.006999"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:16.094921" level="INFO">Selecting frame 'id:webmodule-iframe'.</msg>
+<arg>id:webmodule-iframe</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2024-10-19T17:22:16.094921" elapsed="0.019000"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:22:16.086922" elapsed="0.026999"/>
+</kw>
+<kw name="Klik op Aansprakelijkheidsverzekering">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:16.113921" level="INFO">Clicking element 'id:label_gewenste_verzekeringen3'.</msg>
+<arg>id:label_gewenste_verzekeringen3</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:16.113921" elapsed="0.101002"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:22:16.113921" elapsed="0.102002"/>
+</kw>
+<kw name="Klik op de knop rechts onder om naar de volgende pagina te gaan" owner="Resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:_eventId_volgende</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-19T17:22:16.215923" elapsed="0.012001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:22:17.228118" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:22:16.227924" elapsed="1.000194"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:17.381612" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-10-19T17:22:17.228118" elapsed="0.153494"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:17.381612" level="INFO">Clicking button 'id:_eventId_volgende'.</msg>
+<arg>id:_eventId_volgende</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:17.381612" elapsed="0.053011"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:22:18.434812" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:22:17.434623" elapsed="1.000189"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:22:16.215923" elapsed="2.218889"/>
+</kw>
+<kw name="Kies bij Verzekering voor: &quot;Uzelf&quot;" owner="Resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:label_contract_gezinssituatie1</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-19T17:22:18.435320" elapsed="0.013006"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:18.449327" level="INFO">Clicking element 'id:label_contract_gezinssituatie1'.</msg>
+<arg>id:label_contract_gezinssituatie1</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:18.449327" elapsed="0.048436"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:22:18.435320" elapsed="0.062443"/>
+</kw>
+<kw name="Kies voor Gewenste verzekering voor &quot;zonder eigen risico&quot;" owner="Resources">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:22:19.499259" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:22:18.498804" elapsed="1.000455"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:19.499763" level="INFO">Clicking element 'id:bedrag_aansprakelijkheid_hoog_zonder'.</msg>
+<arg>id:bedrag_aansprakelijkheid_hoog_zonder</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:19.499259" elapsed="0.056510"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:22:18.498804" elapsed="1.056965"/>
+</kw>
+<kw name="Klik op de knop rechts onder om naar de volgende pagina te gaan" owner="Resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:_eventId_volgende</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-19T17:22:19.556768" elapsed="0.009747"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:22:20.566844" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:22:19.566515" elapsed="1.000329"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:20.699680" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-10-19T17:22:20.566844" elapsed="0.132836"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:20.699680" level="INFO">Clicking button 'id:_eventId_volgende'.</msg>
+<arg>id:_eventId_volgende</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:20.699680" elapsed="0.056001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:22:21.756120" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:22:20.755681" elapsed="1.000439"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:22:19.556768" elapsed="2.199352"/>
+</kw>
+<kw name="Klik op de knop rechts onder om naar de volgende pagina te gaan" owner="Resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:_eventId_volgende</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-19T17:22:21.756120" elapsed="0.009579"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:22:22.765736" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:22:21.765699" elapsed="1.000037"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:22.921841" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-10-19T17:22:22.765736" elapsed="0.156105"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:22.921841" level="INFO">Clicking button 'id:_eventId_volgende'.</msg>
+<arg>id:_eventId_volgende</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:22.921841" elapsed="0.054999"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:22:23.977036" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:22:22.976840" elapsed="1.000196"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:22:21.756120" elapsed="2.220916"/>
+</kw>
+<kw name="Vul voor het veld" owner="Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:23.977036" level="INFO">Typing text 'D.E.M.O.' into text field 'id=aanvrager.voorletters'.</msg>
+<arg>id=${Selector}</arg>
+<arg>${Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:23.977036" elapsed="0.066507"/>
+</kw>
+<arg>aanvrager.voorletters</arg>
+<arg>D.E.M.O.</arg>
+<status status="PASS" start="2024-10-19T17:22:23.977036" elapsed="0.066507"/>
+</kw>
+<kw name="Vul voor het veld" owner="Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:24.044543" level="INFO">Typing text 'RobotFrameWork' into text field 'id=aanvrager.achternaam'.</msg>
+<arg>id=${Selector}</arg>
+<arg>${Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:24.044543" elapsed="0.063000"/>
+</kw>
+<arg>aanvrager.achternaam</arg>
+<arg>RobotFrameWork</arg>
+<status status="PASS" start="2024-10-19T17:22:24.043543" elapsed="0.064000"/>
+</kw>
+<kw name="Klik op Geslacht Man" owner="Resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:24.108543" level="INFO">Clicking element 'id=label_aanvrager_geslacht1'.</msg>
+<arg>id=label_aanvrager_geslacht1</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:24.108543" elapsed="0.055001"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:22:24.108543" elapsed="0.055001"/>
+</kw>
+<kw name="Vul voor het veld" owner="Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:24.164544" level="INFO">Typing text 'D.E.M.O.' into text field 'id=aanvrager.geboortedatum'.</msg>
+<arg>id=${Selector}</arg>
+<arg>${Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:24.164544" elapsed="0.059999"/>
+</kw>
+<arg>aanvrager.geboortedatum</arg>
+<arg>D.E.M.O.</arg>
+<status status="PASS" start="2024-10-19T17:22:24.164544" elapsed="0.059999"/>
+</kw>
+<kw name="Vul voor het veld" owner="Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:24.225543" level="INFO">Typing text '2652JB' into text field 'id=aanvrager.adres.postcode'.</msg>
+<arg>id=${Selector}</arg>
+<arg>${Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:24.225543" elapsed="0.064515"/>
+</kw>
+<arg>aanvrager.adres.postcode</arg>
+<arg>2652JB</arg>
+<status status="PASS" start="2024-10-19T17:22:24.225543" elapsed="0.064515"/>
+</kw>
+<kw name="Vul voor het veld" owner="Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:24.291059" level="INFO">Typing text '23' into text field 'id=aanvrager.adres.huisnummer.nummer'.</msg>
+<arg>id=${Selector}</arg>
+<arg>${Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:24.291059" elapsed="0.074999"/>
+</kw>
+<arg>aanvrager.adres.huisnummer.nummer</arg>
+<arg>23</arg>
+<status status="PASS" start="2024-10-19T17:22:24.291059" elapsed="0.074999"/>
+</kw>
+<kw name="Vul voor het veld" owner="Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:24.366058" level="INFO">Typing text '0612312312' into text field 'id=aanvrager.telefoon'.</msg>
+<arg>id=${Selector}</arg>
+<arg>${Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:24.366058" elapsed="0.061000"/>
+</kw>
+<arg>aanvrager.telefoon</arg>
+<arg>0612312312</arg>
+<status status="PASS" start="2024-10-19T17:22:24.366058" elapsed="0.061000"/>
+</kw>
+<kw name="Vul voor het veld" owner="Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:24.428057" level="INFO">Typing text '21-09-1980' into text field 'id=aanvrager.geboortedatum'.</msg>
+<arg>id=${Selector}</arg>
+<arg>${Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:24.428057" elapsed="0.067000"/>
+</kw>
+<arg>aanvrager.geboortedatum</arg>
+<arg>21-09-1980</arg>
+<status status="PASS" start="2024-10-19T17:22:24.427058" elapsed="0.067999"/>
+</kw>
+<kw name="Vul voor het veld" owner="Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:24.495057" level="INFO">Typing text 'test@klaverblad.nl' into text field 'id=aanvrager.email'.</msg>
+<arg>id=${Selector}</arg>
+<arg>${Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:24.495057" elapsed="0.070001"/>
+</kw>
+<arg>aanvrager.email</arg>
+<arg>test@klaverblad.nl</arg>
+<status status="PASS" start="2024-10-19T17:22:24.495057" elapsed="0.070001"/>
+</kw>
+<kw name="Vul voor het veld" owner="Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:24.566058" level="INFO">Typing text '21-09-1980' into text field 'id=aanvrager.geboortedatum'.</msg>
+<arg>id=${Selector}</arg>
+<arg>${Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:24.565058" elapsed="0.076001"/>
+</kw>
+<arg>aanvrager.geboortedatum</arg>
+<arg>21-09-1980</arg>
+<status status="PASS" start="2024-10-19T17:22:24.565058" elapsed="0.076001"/>
+</kw>
+<kw name="Vul voor het veld" owner="Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:24.642058" level="INFO">Typing text 'test@klaverblad.nl' into text field 'id=aanvrager.email'.</msg>
+<arg>id=${Selector}</arg>
+<arg>${Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:24.642058" elapsed="0.065001"/>
+</kw>
+<arg>aanvrager.email</arg>
+<arg>test@klaverblad.nl</arg>
+<status status="PASS" start="2024-10-19T17:22:24.642058" elapsed="0.065001"/>
+</kw>
+<kw name="Vul voor het veld" owner="Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:24.708059" level="INFO">Typing text 'NL05RABO9007769359' into text field 'id=contract.rekening'.</msg>
+<arg>id=${Selector}</arg>
+<arg>${Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:24.708059" elapsed="0.063999"/>
+</kw>
+<arg>contract.rekening</arg>
+<arg>NL05RABO9007769359</arg>
+<status status="PASS" start="2024-10-19T17:22:24.707059" elapsed="0.064999"/>
+</kw>
+<kw name="Vul voor het veld" owner="Resources">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:24.773058" level="INFO">Typing text '19-10-2024' into text field 'id=aansprakelijkheidsverzekering.contract.ingangsdatum'.</msg>
+<arg>id=${Selector}</arg>
+<arg>${Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:24.773058" elapsed="0.058260"/>
+</kw>
+<arg>aansprakelijkheidsverzekering.contract.ingangsdatum</arg>
+<arg>${DatumVandaag}</arg>
+<status status="PASS" start="2024-10-19T17:22:24.772058" elapsed="0.059260"/>
+</kw>
+<kw name="Klik bij Heeft u nog opmerkingen op Nee" owner="Resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:24.832327" level="INFO">Clicking element 'id=label_contract_zijnErOpmerkingen2'.</msg>
+<arg>id=label_contract_zijnErOpmerkingen2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:24.832327" elapsed="0.058250"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:22:24.831318" elapsed="0.059259"/>
+</kw>
+<kw name="Zet een vink &quot;bij Ik begrijp deze uitleg en vul de vragen eerlijk in&quot;" owner="Resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:24.892085" level="INFO">Clicking element 'xpath=//*[@id="webmoduleform"]/div/fieldset[3]/div[1]/div[3]/ins'.</msg>
+<arg>xpath=//*[@id="webmoduleform"]/div/fieldset[3]/div[1]/div[3]/ins</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:24.892085" elapsed="0.053123"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:22:24.891581" elapsed="0.053627"/>
+</kw>
+<kw name="Zet vervolgens alle Radiobuttons op Nee" owner="Resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:24.946229" level="INFO">Clicking element 'xpath=//*[@id="keuzes.verklaring0"]/li[2]/div/ins'.</msg>
+<arg>xpath=//*[@id="keuzes.verklaring0"]/li[2]/div/ins</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:24.946229" elapsed="0.050829"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:24.997777" level="INFO">Clicking element 'xpath=//*[@id="keuzes.verklaring1"]/li[2]/div/ins'.</msg>
+<arg>xpath=//*[@id="keuzes.verklaring1"]/li[2]/div/ins</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:24.997058" elapsed="0.051235"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:25.048293" level="INFO">Clicking element 'xpath=//*[@id="keuzes.verklaring2"]/li[2]/div/ins'.</msg>
+<arg>xpath=//*[@id="keuzes.verklaring2"]/li[2]/div/ins</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:25.048293" elapsed="0.052998"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:25.101291" level="INFO">Clicking element 'xpath=//*[@id="keuzes.verklaring3"]/li[2]/div/ins'.</msg>
+<arg>xpath=//*[@id="keuzes.verklaring3"]/li[2]/div/ins</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:25.101291" elapsed="0.051000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:25.153290" level="INFO">Clicking element 'xpath=//*[@id="keuzes.verklaring4"]/li[2]/div/ins'.</msg>
+<arg>xpath=//*[@id="keuzes.verklaring4"]/li[2]/div/ins</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:25.153290" elapsed="0.049303"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:22:24.945719" elapsed="0.256874"/>
+</kw>
+<kw name="Klik op &quot;Ik ben akkoord met onderstaande bepalingen:&quot;" owner="Resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:25.203599" level="INFO">Clicking element 'xpath=//*[@id="webmoduleform"]/div/fieldset[4]/div[2]/div[2]/ins'.</msg>
+<arg>xpath=//*[@id="webmoduleform"]/div/fieldset[4]/div[2]/div[2]/ins</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:25.203599" elapsed="0.052184"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:22:25.202593" elapsed="0.053190"/>
+</kw>
+<kw name="Klik op de knop rechts onder om naar de volgende pagina te gaan" owner="Resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:_eventId_volgende</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-19T17:22:25.255783" elapsed="0.009002"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:22:26.265862" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:22:25.264785" elapsed="1.001077"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:26.379533" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-10-19T17:22:26.265862" elapsed="0.113671"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:26.379533" level="INFO">Clicking button 'id:_eventId_volgende'.</msg>
+<arg>id:_eventId_volgende</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-19T17:22:26.379533" elapsed="0.068005"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-19T17:22:27.448722" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-19T17:22:26.448537" elapsed="1.000185"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:22:25.255783" elapsed="2.192939"/>
+</kw>
+<kw name="Controleer dat voor" owner="Resources">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:27.449541" level="INFO">Verifying element 'id=waarde.vn.volledigenaam' contains exact text 'D.E.M.O. RobotFrameWork'.</msg>
+<arg>id=${Selector}</arg>
+<arg>${Value}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-19T17:22:27.448722" elapsed="0.016066"/>
+</kw>
+<arg>waarde.vn.volledigenaam</arg>
+<arg>D.E.M.O. RobotFrameWork</arg>
+<status status="PASS" start="2024-10-19T17:22:27.448722" elapsed="0.016066"/>
+</kw>
+<kw name="Controleer dat voor" owner="Resources">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:27.465984" level="INFO">Verifying element 'id=waarde.vn.straat' contains exact text 'Rietmeerplantsoen'.</msg>
+<arg>id=${Selector}</arg>
+<arg>${Value}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-19T17:22:27.465984" elapsed="0.012543"/>
+</kw>
+<arg>waarde.vn.straat</arg>
+<arg>Rietmeerplantsoen</arg>
+<status status="PASS" start="2024-10-19T17:22:27.464788" elapsed="0.013739"/>
+</kw>
+<kw name="Controleer dat voor" owner="Resources">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:27.479527" level="INFO">Verifying element 'id=waarde.vn.huisnummer' contains exact text '23'.</msg>
+<arg>id=${Selector}</arg>
+<arg>${Value}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-19T17:22:27.479527" elapsed="0.011998"/>
+</kw>
+<arg>waarde.vn.huisnummer</arg>
+<arg>23</arg>
+<status status="PASS" start="2024-10-19T17:22:27.478527" elapsed="0.012998"/>
+</kw>
+<kw name="Controleer dat voor" owner="Resources">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:27.492526" level="INFO">Verifying element 'id=waarde.vn.plaats' contains exact text 'Berkel en Rodenrijs'.</msg>
+<arg>id=${Selector}</arg>
+<arg>${Value}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-10-19T17:22:27.492526" elapsed="0.013001"/>
+</kw>
+<arg>waarde.vn.plaats</arg>
+<arg>Berkel en Rodenrijs</arg>
+<status status="PASS" start="2024-10-19T17:22:27.492526" elapsed="0.013001"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-10-19T17:22:27.634527" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-10-19T17:22:27.506527" elapsed="0.128000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-19T17:22:27.634527" elapsed="2.115233"/>
+</kw>
+<status status="PASS" start="2024-10-19T17:22:12.026232" elapsed="17.723528"/>
+</test>
+<doc>This is the first test case</doc>
+<status status="PASS" start="2024-10-19T17:22:11.888526" elapsed="17.862235"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Klaverblad">Klaverblad</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
