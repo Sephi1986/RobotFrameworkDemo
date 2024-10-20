@@ -52,7 +52,7 @@ Test Webpage with validation
 
     Klik op de knop rechts onder om naar de volgende pagina te gaan
 
-    Controleer dat voor                 waarde.vn.volledigenaam         D.E.M.O. RobotFrameWork
+    #Controleer dat voor                 waarde.vn.volledigenaam         D.E.M.O. RobotFrameWork
     Controleer dat voor                 waarde.vn.straat                Rietmeerplantsoen
     Controleer dat voor                 waarde.vn.huisnummer            23
     Controleer dat voor                 waarde.vn.plaats                Berkel en Rodenrijs

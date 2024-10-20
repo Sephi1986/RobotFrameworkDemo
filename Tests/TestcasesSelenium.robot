@@ -12,7 +12,7 @@ ${URL}      https://tweakers.net/
 *** Test Cases ***
 
 Test Webpage with validation
-    Open Browser    ${URL}
+    Open Browser    ${URL}      headlesschrome      options=add_argument("--disable-search-engine-choice-screen")
     Capture Page Screenshot
     Click Link                              Pricewatch
     Zoek via het zoekveld naar product      iPhone 15 Max Pro
