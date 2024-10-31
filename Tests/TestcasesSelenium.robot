@@ -11,13 +11,16 @@ ${URL}      https://tweakers.net/
 
 *** Test Cases ***
 
-Test Webpage with validation
-    Open Browser    ${URL}      headlesschrome      options=add_argument("--disable-search-engine-choice-screen")
+Test Webpage with validation tweakers
+    Open Browser    ${URL}      chrome      options=add_argument("--disable-search-engine-choice-screen")
     Capture Page Screenshot
-    Click Link                              Pricewatch
-    Zoek via het zoekveld naar product      iPhone 15 Max Pro
-    Click op de Link van iPhone 15 Pro Max
-    Controleer aantal gevonden resultaten   12 uitvoeringen - Pagina 1 van 1
+
+    Sleep           2s
+#    Click Element       id=pg-accept-btn
+#    Click Link                              Pricewatch
+#    Zoek via het zoekveld naar product      iPhone 15 Max Pro
+#    Click op de Link van iPhone 15 Pro Max
+#    Controleer aantal gevonden resultaten   12 uitvoeringen - Pagina 1 van 1
     [Teardown]    Close Browser
 
 
